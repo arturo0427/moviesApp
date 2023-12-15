@@ -1,14 +1,24 @@
-import { AppBar, Box, Button, Drawer, Grid, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography } from '@mui/material';
-import { MenuOutlined } from "@mui/icons-material";
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
+import { MenuOutlined } from "@mui/icons-material";
+import { NavListDrawer } from './';
+import {
+    AppBar,
+    Box,
+    Button,
+    Grid,
+    IconButton,
+    Toolbar,
+    Typography,
+    Drawer,
+} from '@mui/material';
+
 
 const navegationLinks = [{ title: 'Home', path: '/' }, { title: 'Search', path: '/search' }];
 
 export const NavBar = () => {
 
     const [open, setOpen] = useState(false);
-
 
     return (
         <>
@@ -61,29 +71,10 @@ export const NavBar = () => {
                 onClose={() => setOpen(false)}
                 sx={{ display: { xs: "flex", sm: "none" } }}
             >
-                <Box sx={{ width: 250 }}>
-                    <nav>
-                        <List>
-                            {navegationLinks.map((item) => (
-                                <ListItem
-                                    disablePadding
-                                    key={item.title}
-                                >
-                                    <ListItemButton
-                                        component={NavLink}
-                                        to={item.path}
-                                        onClick={() => setOpen(false)}
-                                    >
-                                        <ListItemIcon>{item.icon}</ListItemIcon>
-                                        <ListItemText>{item.title}</ListItemText>
-                                    </ListItemButton>
-                                </ListItem>
-                            ))}
-                        </List>
-                    </nav>
-                </Box>
+                <NavListDrawer navegationLinks={navegationLinks} setOpen={setOpen} component={NavLink} />
 
             </Drawer>
+
         </>
     )
 }

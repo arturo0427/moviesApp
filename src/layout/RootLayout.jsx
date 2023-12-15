@@ -1,15 +1,23 @@
 import { NavBar } from '../components';
-import { Box } from '@mui/material';
+import { Box, Toolbar } from '@mui/material';
 
-const drawerWidth = 280;
 
 export const RootLayout = ({ children }) => {
     return (
-        <Box sx={{ display: "flex", height: '100vh' }}>
+        <Box sx={{ display: "flex", flexDirection: 'column', height: '100vh' }}>
             <NavBar />
-            <Box component='main' sx={{ flexGrow: 1, p: 3 }}>
+            <Box
+                component='main'
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    flexGrow: 1,
+                    p: 2,
+                    mt: { xs: 7, sm: 8 }
+                }}
+            >
                 {children}
             </Box>
-        </Box>
+        </Box >
     )
 }

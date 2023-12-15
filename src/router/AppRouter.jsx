@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import { RootLayout } from "../layout";
 import { HomePage, SearchPage } from "../pages";
 
 
