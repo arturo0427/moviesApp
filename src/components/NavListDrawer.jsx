@@ -1,12 +1,15 @@
 import { NavLink } from 'react-router-dom';
+import { AccessAlarm, ThreeDRotation } from '@mui/icons-material';
+import Icon from '@mui/material/Icon';
+
 import {
     Box,
-    Divider,
     List,
     ListItem,
     ListItemButton,
     ListItemIcon,
     ListItemText,
+    SvgIcon,
 } from '@mui/material';
 
 export const NavListDrawer = ({ navegationLinks, setOpen }) => {
@@ -24,7 +27,9 @@ export const NavListDrawer = ({ navegationLinks, setOpen }) => {
                                 to={item.path}
                                 onClick={() => setOpen(false)}
                             >
-                                <ListItemIcon>{item.icon}</ListItemIcon>
+
+                                <ListItemIcon>
+                                </ListItemIcon>
                                 <ListItemText>{item.title}</ListItemText>
                             </ListItemButton>
                         </ListItem>

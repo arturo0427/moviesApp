@@ -14,7 +14,7 @@ import {
 } from '@mui/material';
 
 
-const navegationLinks = [{ title: 'Home', path: '/' }, { title: 'Search', path: '/search' }];
+const navegationLinks = [{ title: 'Home', path: '/', icon: `AccessAlarm` }, { title: 'Search', path: '/search', icon: 'AccessAlarm' }];
 
 export const NavBar = () => {
 
@@ -71,7 +71,7 @@ export const NavBar = () => {
                 onClose={() => setOpen(false)}
                 sx={{ display: { xs: "flex", sm: "none" } }}
             >
-                <NavListDrawer navegationLinks={navegationLinks} setOpen={setOpen} component={NavLink} />
+                <NavListDrawer navegationLinks={navegationLinks} setOpen={setOpen} />
 
             </Drawer>
 

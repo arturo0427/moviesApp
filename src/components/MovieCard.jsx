@@ -18,7 +18,7 @@ export const MovieCard = ({ genre }) => {
                             flexDirection: 'column',
                             mb: 2,
                             justifyContent: 'space-between',
-                            width: { xs: '100px', md: '150px', lg: '210px' },
+                            width: { xs: '100px', sm: '110px', md: '150px', lg: '210px' },
                             boxShadow: 6
                         }}
                         key={movie.title}
