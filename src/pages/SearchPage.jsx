@@ -25,7 +25,7 @@ export const SearchPage = () => {
       </Typography>
       <Autocomplete
         disablePortal
-        id="combo-box-demo"
+        id="combo-box-movies"
         options={movies.map((option) => option.title)}
         sx={{ width: { xs: 'auto' }, mb: 2 }}
         renderInput={(params) => <TextField {...params} label="Search movie" />}

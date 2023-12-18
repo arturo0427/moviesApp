@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { HomePage, SearchPage } from "../pages";
+import { HomePage, SearchPage, AddMoviePage } from "../pages";
 
 
 export const AppRouter = () => {
@@ -7,6 +7,7 @@ export const AppRouter = () => {
         <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="search" element={<SearchPage />} />
+            <Route path="add" element={<AddMoviePage />} />
         </Routes>
     )
 }

@@ -14,7 +14,11 @@ import {
 } from '@mui/material';
 
 
-const navegationLinks = [{ title: 'Home', path: '/', icon: `AccessAlarm` }, { title: 'Search', path: '/search', icon: 'AccessAlarm' }];
+const navegationLinks = [
+    { title: 'Home', path: '/', icon: `AccessAlarm` },
+    { title: 'Search', path: '/search', icon: 'AccessAlarm' },
+    { title: 'Add Movie', path: '/add', icon: 'AccessAlarm' },
+];
 
 export const NavBar = () => {
 

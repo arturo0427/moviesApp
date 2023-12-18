@@ -3,11 +3,11 @@ import { Box, Chip, Divider, Grid, Typography } from "@mui/material"
 export const MovieInfo = ({ movie }) => {
 
     return (
-        <Grid container sx={{ flexDirection: { md: 'row' }, justifyContent: { xs: 'center', md: 'space-around' }, mt: 2, mb: 2 }}>
+        <Grid container sx={{ flexDirection: { md: 'row' }, justifyContent: { xs: 'center', md: 'space-around' }, mt: 2, mb: 2, width: { md: 1000 } }}>
             <Box sx={{ mb: { xs: 1, sm: 2 } }}>
                 <img src={movie.posterurl} alt={movie.title} />
             </Box>
-            <Box sx={{ width: { md: 400 } }}>
+            <Box sx={{ width: { md: 600 } }}>
                 <Typography variant="h3" sx={{ mb: 2 }}>{movie.title}</Typography>
                 <Typography>{movie.storyline}</Typography>
                 <Box sx={{ mt: 2, mb: 2 }}>
