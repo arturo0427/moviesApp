@@ -5,7 +5,7 @@ import { MovieInfo } from '../components';
 import { Box, IconButton, Typography } from '@mui/material';
 import { ArrowBack } from '@mui/icons-material';
 
-export const DetailMovie = () => {
+export const DetailMoviePage = () => {
 
     const navigate = useNavigate();
     const { id } = useParams();
