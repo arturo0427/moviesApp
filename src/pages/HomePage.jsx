@@ -11,7 +11,6 @@ export const HomePage = () => {
                     <MoviesCategories genre={genre} />
                 ))
             }
-
         </RootLayout>
     )
 }

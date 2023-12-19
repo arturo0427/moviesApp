@@ -1,10 +1,10 @@
-import { Alert, Autocomplete, Box, Button, Divider, Snackbar, TextField, Typography } from '@mui/material'
-import { RootLayout } from '../layout/RootLayout'
-import { genres } from '../data/genres'
-import { Controller, useForm } from 'react-hook-form'
-import { insertmovie } from '../helpers/insertMovie'
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Alert, Autocomplete, Box, Button, Snackbar, TextField, Typography } from '@mui/material';
+import { RootLayout } from '../layout/RootLayout';
+import { genres } from '../data/genres';
+import { Controller, useForm } from 'react-hook-form';
+import { insertmovie } from '../helpers/insertMovie';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 export const AddMoviePage = () => {
@@ -16,13 +16,10 @@ export const AddMoviePage = () => {
 
     const navigate = useNavigate();
 
-
     const onSubmit = (data) => {
         insertmovie(data);
         setOpenSnackBar(true);
-
         reset();
-
     }
 
     const handleClose = (event, reason) => {
@@ -38,19 +35,14 @@ export const AddMoviePage = () => {
     return (
         <RootLayout>
             <Typography component='h2'
-                sx={{
-                    fontWeight: 600,
-                    fontSize: 30,
-                    mb: 1
-                }}
-            >
+                sx={{ fontWeight: 600, fontSize: 30, mb: 1 }}>
                 Add Movie
             </Typography>
 
             <Box
                 component='form'
                 onSubmit={handleSubmit(onSubmit)}
-                sx={{ display: 'flex', flexDirection: 'column', height: 400, width: { md: 700 }, justifyContent: 'space-around' }}
+                sx={{ display: 'flex', flexDirection: 'column', height: 500, width: { md: 700 }, justifyContent: 'space-around' }}
             >
                 <TextField label='Title' {...register('title', { required: 'Title is required' })} error={!!errors.title} helperText={errors.title?.message} />
 
@@ -61,6 +53,13 @@ export const AddMoviePage = () => {
                 />
                 <TextField label='Story' multiline rows={4} {...register('storyline', { required: 'Title is required' })}
                     error={!!errors.storyline} helperText={errors.storyline?.message}
+                />
+                <TextField
+                    type='number'
+                    label='Rating'
+                    inputProps={{ min: "1", max: "5", step: "1" }}
+                    {...register('rating', { required: 'Rating is required' })}
+                    error={!!errors.rating} helperText={errors.rating?.message}
                 />
                 <Controller
                     name="genres"
