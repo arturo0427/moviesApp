@@ -13,7 +13,7 @@ export const DetailMoviePage = () => {
     const movie = getMovieById(id);
 
     const onBack = () => {
-        navigate('/moviesApp');
+        navigate('/');
     }
 
 
