@@ -9,10 +9,10 @@ export const AppRouter = () => {
     return (
         <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="search" element={<SearchPage />} />
-            <Route path="add" element={<AddMoviePage />} />
-            <Route path="movie/:id" element={<DetailMoviePage />} />
-            <Route path="error" element={<ErrorPage />} />
+            <Route path="/search" element={<SearchPage />} />
+            <Route path="/add" element={<AddMoviePage />} />
+            <Route path="/movie/:id" element={<DetailMoviePage />} />
+            <Route path="/error" element={<ErrorPage />} />
             <Route path="/*" element={<Navigate to='/error' />} />
         </Routes>
     )
