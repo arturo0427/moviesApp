@@ -8,7 +8,7 @@ import { HomePage, SearchPage, AddMoviePage, DetailMoviePage, ErrorPage } from "
 export const AppRouter = () => {
     return (
         <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/moviesApp" element={<HomePage />} />
             <Route path="/search" element={<SearchPage />} />
             <Route path="/add" element={<AddMoviePage />} />
             <Route path="/movie/:id" element={<DetailMoviePage />} />
