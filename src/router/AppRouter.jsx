@@ -12,8 +12,8 @@ export const AppRouter = () => {
             <Route path="/search" element={<SearchPage />} />
             <Route path="/add" element={<AddMoviePage />} />
             <Route path="/movie/:id" element={<DetailMoviePage />} />
-            <Route path="/error" element={<ErrorPage />} />
-            <Route path="/*" element={<Navigate to='/error' />} />
+            {/* <Route path="/error" element={<ErrorPage />} /> */}
+            {/* <Route path="/*" element={<Navigate to='/error' />} /> */}
         </Routes>
     )
 }
